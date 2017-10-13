@@ -1,0 +1,56 @@
+		/*Gestaltung Userpage*/	
+		
+		@import 
+		url('https://fonts.googleapis.com/css?family=Poiret+One');
+		@import
+		url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Poiret+One');
+		
+
+#EIA2 {
+	font-family: 'Poiret One', cursive;
+	text-align: center; 
+}
+		
+#myname {
+	font-family: 'Poiret One', cursive;
+	text-align: center;
+}
+
+.aufgaben {
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+}
+
+.parallax-1, .parallax-2 {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.65;
+}
+
+.parallax-1 {
+  background-image: url("BilderUP/bild6.jpg");
+  min-height: 500px;
+}
+
+.parallax-2 {
+  background-image: url("BilderUP/bild11.jpg");
+  min-height: 400px;
+  
+}
+
+#zitat1 {
+  letter-spacing: 3px;
+  font: 23px 'Poiret One', cursive;
+  color: #b30000;
+  text-align: center;
+}
+
+
+#work{
+	font-size: 50px;
+	font-family: 'Poiret One', cursive;
+	color: white;
+	text-align: center;
+}
