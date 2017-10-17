@@ -152,30 +152,10 @@ function init(): void {
     crc2.closePath();
     crc2.fillStyle = "#5a924f";
     crc2.fill();
-    crc2.beginPath();
-    crc2.moveTo(410, 390);
-    crc2.lineTo(460, 470);
-    crc2.lineTo(360, 470);
-    crc2.closePath();
-    crc2.fillStyle = "#5a924f";
-    crc2.fill();
     
-    crc2.fillStyle = "#8b5a2b";
-    crc2.fillRect(70, 455, 25, 45);
-    crc2.beginPath();
-    crc2.moveTo(80, 350);
-    crc2.lineTo(130, 430);
-    crc2.lineTo(30, 430);
-    crc2.closePath();
-    crc2.fillStyle = "#5a924f";
-    crc2.fill();
-    crc2.beginPath();
-    crc2.moveTo(80, 390);
-    crc2.lineTo(130, 470);
-    crc2.lineTo(30, 470);
-    crc2.closePath();
-    crc2.fillStyle = "#5a924f";
-    crc2.fill();
+    
+    
+   
     
     
     
