@@ -1,13 +1,25 @@
+/*
+Aufgabe: Aufgabe 2, Canvas - Functions
+Name: Veronika Garbero
+Matrikel: 256581
+Datum: 17.10.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
 namespace A2{
 window.addEventListener("load", init);
+let crc2: CanvasRenderingContext2D;
 
 function init(): void {
     
     let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
     console.log(canvas);
 
-    let crc2: CanvasRenderingContext2D = canvas.getContext("2d");
+    crc2 = canvas.getContext("2d");
     console.log(crc2);
+    
     
     // Himmel
     crc2.fillStyle = "#b2dfee";
@@ -20,6 +32,7 @@ function init(): void {
     crc2.fill();
     
     // Wolken
+    /*Wolke 1
     crc2.beginPath();
     crc2.arc(560, 125, 18, 0, 2 * Math.PI);
     crc2.arc(575, 130, 15, 0, 2 * Math.PI);
@@ -27,6 +40,7 @@ function init(): void {
     crc2.fillStyle = "#ffffff";
     crc2.fill();
     
+    // Wolke 2
     crc2.beginPath();
     crc2.arc(300, 80, 18, 0, 2 * Math.PI);
     crc2.arc(315, 85, 15, 0, 2 * Math.PI);
@@ -34,15 +48,43 @@ function init(): void {
     crc2.fillStyle = "#ffffff";
     crc2.fill();
     
+    // Wolke 3
     crc2.beginPath();
     crc2.arc(700, 250, 18, 0, 2 * Math.PI);
     crc2.arc(715, 255, 15, 0, 2 * Math.PI);
     crc2.arc(685, 255, 15, 0, 2 * Math.PI);
     crc2.fillStyle = "#ffffff";
-    crc2.fill();
+    crc2.fill();*/
     
     
-    // Piste
+    // 3 Wolken fix + Funktion 
+    drawCloud(560, 125, "#ffffff");
+    drawCloud(300, 80, "#ffffff");
+    drawCloud(700, 250, "#ffffff"); 
+    
+    // Function drawCloud 
+    
+    function drawCloud (x: number, y: number, color: string) :void {
+        // Wolke 1
+        crc2.beginPath();
+        crc2.arc(x, y, 18, 0, 2 * Math.PI);
+        crc2.arc(x + 15, y + 5, 15, 0, 2 * Math.PI);
+        crc2.arc(x - 15, y + 5, 15, 0, 2 * Math.PI);
+        crc2.closePath();
+        crc2.fillStyle = color;
+        crc2.fill();
+        
+ }
+    
+    // 2 Wolken an zufälliger Position
+        for (let i: number = 0; i < 2; i++) {
+            let x: number = 330 + Math.random() * 120;
+            let y: number = 80 + Math.random() * 150;
+            drawCloud(x, y, "#ffffff");
+        }
+        
+    
+    // Linie Piste
     crc2.beginPath();
     crc2.moveTo(60, 0);
     crc2.lineTo(800, 550);
@@ -54,7 +96,7 @@ function init(): void {
     crc2.fill();
 
 
-    // Linie Piste
+    // Linie Lift
     crc2.beginPath();
     crc2.moveTo(30, 0);
     crc2.lineTo(800, 580);
@@ -64,9 +106,81 @@ function init(): void {
     crc2.moveTo(60, 0);
     crc2.lineTo(800, 550);
     crc2.stroke(); 
+    
+    /*Großer Baum
+    crc2.beginPath();
+    crc2.moveTo(410, 320);
+    crc2.lineTo(460, 480);
+    crc2.lineTo(360, 480);
+    crc2.closePath();
+    crc2.fillStyle = "#5a924f";
+    crc2.fill();*/
 
     
-    // Schneemann
+    // Großer Baum fix + Funktion
+    drawTreeL(410, 320, "#5a924f");
+    
+    //Function drawTreeL
+    function drawTreeL(x: number, y: number, color: string) :void {
+        crc2.beginPath();
+        crc2.moveTo(x, y);
+        crc2.lineTo(x + 50 , y + 160);
+        crc2.lineTo(x - 50, y + 160);
+        crc2.closePath();
+        crc2.stroke();
+        crc2.fillStyle= color;
+        crc2.fill();
+        
+    }
+    
+    
+    // 3 kleine fixe Bäume + Funktion
+    drawTree(80, 120, "#5a924f");
+    drawTree(70, 320, "#5a924f");
+    drawTree(590, 500, "#5a924f");
+    
+    
+     // Function drawTree
+    
+    function drawTree (x: number, y: number, color: string) :void {
+        crc2.beginPath();
+        crc2.moveTo(x, y);
+        crc2.lineTo(x + 20, y + 60);
+        crc2.lineTo(x - 20, y + 60);
+        crc2.closePath();
+        crc2.stroke();
+        crc2.fillStyle = color;
+        crc2.fill();
+            
+    }
+    
+    // 2 Bäume an zufälliger Position
+        for (let i: number = 0; i < 2; i++) {
+            let x: number = 50 + Math.random() * 120;
+            let y: number = 190 + Math.random() * 130;
+            drawTree(x, y, "#5a924f");
+        }
+    
+    // 2 Bäume an zufälliger Position
+        for (let i: number = 0; i < 2; i++) {
+            let x: number = 50 + Math.random() * 120;
+            let y: number = 390 + Math.random() * 130;
+            drawTree(x, y, "#5a924f");
+        }
+    
+    // 2 Bäume an zufälliger Position
+        for (let i: number = 0; i < 2; i++) {
+            let x: number = 400 + Math.random() * 120;
+            let y: number = 390 + Math.random() * 130;
+            drawTree(x, y, "#5a924f");
+        }
+    
+     // 2 Bäume in einer Reihe
+        for (let i: number = 0; i < 2; i++) {
+            drawTree(290 + i * 60, 280, "#5a924f");
+}
+    
+     // Schneemann
     
     // KÃ¶rper
     crc2.beginPath();
@@ -142,27 +256,34 @@ function init(): void {
     crc2.fillStyle= "#262626";
     crc2.fill();
     
-    // BÃ¤ume
-    crc2.fillStyle = "#8b5a2b";
-    crc2.fillRect(400, 455, 25, 45);
+    
+    /* Snowflakes
     crc2.beginPath();
-    crc2.moveTo(410, 350);
-    crc2.lineTo(460, 430);
-    crc2.lineTo(360, 430);
-    crc2.closePath();
-    crc2.fillStyle = "#5a924f";
-    crc2.fill();
+    crc2.arc(130, 120, 5, 0, 2 * Math.PI);
+    crc2.fillStyle= "#ffffff";
+    crc2.fill();*/
     
+    drawSnowflake(180, 220, "#ffffff");
     
+    function drawSnowflake(x: number, y: number, color: string) :void {
+        crc2.beginPath();
+        crc2.arc(x, y, 3, 0, 2 * Math.PI);
+        crc2.closePath();
+        crc2.fillStyle = color;
+        crc2.fill();
+            
+    }
     
-   
+    // 80 Schneeflocken an zufälliger Position
+        for (let i: number = 0; i < 80; i++) {
+            let x: number = 50 + Math.random() * 700;
+            let y: number = 20 + Math.random() * 600;
+            drawSnowflake(x, y, "#ffffff");
+        }
     
-    
-    
-}
-}   
-    
-    
+
+    }  
+    }
     
     
     
