@@ -229,4 +229,4 @@ var A2;
         }
     }
 })(A2 || (A2 = {}));
-//# sourceMappingURL=skipiste2.js.map
+//# sourceMappingURL=skipisteFun.js.map
