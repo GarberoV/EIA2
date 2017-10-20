@@ -107,6 +107,8 @@ function init(): void {
     crc2.lineTo(800, 550);
     crc2.stroke(); 
     
+    
+    
     /*Groﬂer Baum
     crc2.beginPath();
     crc2.moveTo(410, 320);
