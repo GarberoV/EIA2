@@ -1,5 +1,5 @@
 /*
-Aufgabe: Aufgabe 2, Canvas - Functions
+Aufgabe: Aufgabe 2.1, Canvas - Functions
 Name: Veronika Garbero
 Matrikel: 256581
 Datum: 17.10.2017
