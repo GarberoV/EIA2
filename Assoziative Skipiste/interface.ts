@@ -316,7 +316,7 @@ namespace A4 {
             drawCloud(cloudX[i], cloudY[i])
         }
         
-        //Skifahrer
+        //Skifahrer ------------- A4
         for (let i: number = 0; i < skifahrer.length; i++) {
             if (skifahrer[i].x < 0 || skifahrer[i].y > 600) {
           skifahrer[i].x = 0;

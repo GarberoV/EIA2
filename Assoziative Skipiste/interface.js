@@ -238,7 +238,7 @@ var A4;
             cloudX[i] += Math.random(); // andere Bewegungsmuster finden
             drawCloud(cloudX[i], cloudY[i]);
         }
-        //Skifahrer
+        //Skifahrer ------------- A4
         for (let i = 0; i < skifahrer.length; i++) {
             if (skifahrer[i].x < 0 || skifahrer[i].y > 600) {
                 skifahrer[i].x = 0;
