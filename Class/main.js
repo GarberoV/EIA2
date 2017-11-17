@@ -7,6 +7,7 @@ Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
+// ---------------- !!!! NICHT FERTIG GEWORDEN... FINDE DEN FEHLER NCHT :(( 
 var A5_Class;
 (function (A5_Class) {
     window.addEventListener("load", init);
