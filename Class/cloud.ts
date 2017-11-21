@@ -25,7 +25,7 @@ namespace A5_Class {
                 this.cloudX = 0;
             }
             this.cloudX += Math.random();
-            this.moveCloudInfo();
+            this.drawCloudInfo();
             }
     
         

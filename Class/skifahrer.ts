@@ -47,7 +47,7 @@ namespace A5_Class {
         moveSkierInfo(): void {
             if (this.skifahrerX > 800) {
                 this.skifahrerX = 0;
-                this.skifahrerY = 0;
+                this.skifahrerY = 130;
                 
                 this.bodycolor = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
                 }
@@ -60,10 +60,7 @@ namespace A5_Class {
             this.skifahrerX += 5;
             this.skifahrerY += 3;
             this.drawSkierInfo();
-        }
-        
-
            
-      
+        }
       }
     }

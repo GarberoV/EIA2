@@ -33,7 +33,7 @@ var A5_Class;
         moveSkierInfo() {
             if (this.skifahrerX > 800) {
                 this.skifahrerX = 0;
-                this.skifahrerY = 0;
+                this.skifahrerY = 130;
                 this.bodycolor = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
             }
             if (this.skifahrerY > 600) {

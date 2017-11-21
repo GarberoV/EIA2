@@ -19,7 +19,7 @@ var A5_Class;
                 this.cloudX = 0;
             }
             this.cloudX += Math.random();
-            this.moveCloudInfo();
+            this.drawCloudInfo();
         }
         drawCloudInfo() {
             A5_Class.crc2.fillStyle = "#ffffff";
