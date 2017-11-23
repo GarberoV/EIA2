@@ -327,11 +327,6 @@ namespace A4 {
     skifahrer[i].x += 5;
     skifahrer[i].y += 3;
     drawSkifahrer(skifahrer[i]);
-    skifahrer[i].x -= 40;
-    skifahrer[i].y += 60;
-    drawSkifahrer(skifahrer[i]);
-    skifahrer[i].x += 40;
-    skifahrer[i].y -= 60;       
     
   }
   window.setTimeout(animate, 20);
@@ -341,4 +336,4 @@ namespace A4 {
 
 
 
-    
+  
