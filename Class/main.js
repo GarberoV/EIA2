@@ -15,7 +15,6 @@ var A5_Class;
     let snow = [];
     let cloud = [];
     let img;
-    window.addEventListener("load", init);
     // Init Funktion, die B�ume, Berge usw. zeichnet
     function init() {
         let canvas = document.getElementsByTagName("canvas")[0];

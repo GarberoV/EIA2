@@ -1,23 +1,25 @@
 /*
-Aufgabe: Aufgabe 5, Interface - Class
+Aufgabe: Aufgabe 6, Polymorphe Skipiste
 Name: Veronika Garbero
 Matrikel: 256581
-Datum: 14.11.2017
+Datum: 23.11.2017
 Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
 
-// ---------------- !!!! NICHT FERTIG GEWORDEN... FINDE DEN FEHLER NCHT :(( 
 
-namespace A5_Class {
+namespace A6 {
     
    export let crc2: CanvasRenderingContext2D;
-         window.addEventListener("load", init);
     
-        let skifahrer: SkierInfo[] = [];
-        let snow: SnowInfo[] = [];
-        let cloud: CloudInfo[] = [];
+        window.addEventListener("load", init);
+    
+        let objects: MovingObjects[] = [];
+    
+        let n_skifahrer: number = 1;
+        let n_snow: number = 160;
+        let n_cloud: number = 3;
         let img: ImageData;
        
 
@@ -145,30 +147,36 @@ namespace A5_Class {
     crc2.rect(170, 305, 60, 40);
     crc2.fillStyle= "#262626";
     crc2.fill();
+     
 
 //-------------- Schleifen
         
         // Skifahrer
-        for (let i: number = 0; i < 2; i++) {
-            skifahrer[i] = new SkierInfo (0, 130,
+        for (let i: number = 0; i < n_skifahrer; i++) {
+            let ski = new SkierInfo (0, 130,
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)",
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)");
-                                         
+                
+            objects.push(ski);                            
             }
         
         
         // 160 Schneeflocken an zufälliger Position
-        for (let i: number = 0; i < 160; i++) {
-            snow[i] = new SnowInfo (50 + Math.random() * 700,
-                                    20 + Math.random() * 600);
-           }
+        for (let i: number = 0; i < n_snow; i++) {
+            let sn = new SnowInfo (50 + Math.random() * 700,
+                                   20 + Math.random() * 600);
+
+            objects.push(sn);
+            }
         
         
         // 3 Wolken an zufälliger Position
-        for (let i: number = 0; i < 3; i++) {
-             cloud[i] = new CloudInfo (330 + Math.random() * 130,
+        for (let i: number = 0; i < n_cloud; i++) {
+             let cl = new CloudInfo (330 + Math.random() * 130,
                                        30 + Math.random() * 200);
-           } 
+          
+            objects.push(cl);  
+            } 
          
         
         // 1 Baum an zufälliger Position
@@ -231,24 +239,10 @@ namespace A5_Class {
         crc2.putImageData(img, 0, 0);
    
        
-       // Schneeflocken
-        for (let i: number = 0; i < snow.length; i++) {
-            let sn: SnowInfo = snow[i];
-            sn.moveSnowInfo();
+        for (let i: number = 0; i < objects.length; i++) {
+            let o: MovingObjects = objects[i];
+            o.move();
           }
-        
-            
-        // Wolke
-        for (let i: number = 0; i < cloud.length; i++) {
-            let cl: CloudInfo = cloud[i];
-            cl.moveCloudInfo();
-        }
-        
-        //Skifahrer
-       for (let i: number = 0; i < skifahrer.length; i++) {
-           let ski: SkierInfo = skifahrer[i];
-           ski.moveSkierInfo();
-         }
        
      
           window.setTimeout(animate, 20);
