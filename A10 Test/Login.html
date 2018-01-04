@@ -13,20 +13,58 @@ nicht kopiert und auch nicht diktiert.
 <html lang="de">
 
 	<head>
-		<title>A10 Weihnachtsbaumkonfigurator</title>
+		<title>A10 Login</title>
 		<meta charset="utf-8">
 		
-		 <link rel="stylesheet" type="text/css" href="login.css">
+		 <link rel="stylesheet" type="text/css" href="Login.css">
 		 
-		 <script src="login.js"></script>
+		 <script src="Login.js"></script>
+		 
 		 
 		 
 		
 	</head>
 	
 	<body>
+			
+			<!-- LOGIN -->
 	
-	<h1>Login</h1>
+	 <form action="action_page.php">
+	 
+	 <h1>Login</h1>
+
+  <div>
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+    <button type="submit">Login</button><br>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+</form> 
+
+			<!--  SIGN UP -->
+			
+			 <form action="action_page.php">
+			 
+		<h1>Sign Up</h1>
+ 
+  <div>
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+    
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+</form> 
+
 	
 	</body>
 	
