@@ -7,5 +7,4 @@ Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
-
-
+//# sourceMappingURL=A10-Test2.js.map
