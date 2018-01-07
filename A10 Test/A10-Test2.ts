@@ -9,3 +9,12 @@ nicht kopiert und auch nicht diktiert.
 */
 
 
+
+namespace A10 {
+    
+    window.addEventListener("load", init);
+  
+    
+    }
+    
+    

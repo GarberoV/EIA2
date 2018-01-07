@@ -30,7 +30,7 @@ h1 {
 	position: absolute;
 	left: 50px;
 	top: 73px;
-	font-size: 35px;
+	font-size: 20px;
 	font-family: 'Arima Madurai', cursive;
 	color: black;
 }
@@ -43,8 +43,10 @@ form {
     opacity: 0.80;
     text-align: center;
     position: relative;
-    top: 80px;
-    font-size: 20px;
+    top: 120px;
+    left: 350px;
+    width: 50%;
+    font-size: 15px;
     font-family: 'Arima Madurai', cursive;
 }
 
@@ -52,27 +54,27 @@ form {
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
-    width: 15%;
+    width: 25%;
     padding: 12px 15px;
     margin: 5px 0;
     display: inline-block;
     border: 1px solid black;
     box-sizing: border-box;
     font-family: 'Arima Madurai', cursive;
-    font-size: 13px;
+    font-size: 10px;
 }
 
 /* Set a style for all buttons */
 button {
     background-color: black;
     font-family: 'Arima Madurai', cursive;
-    font-size: 20px;
+    font-size: 13px;
     color: white;
     padding: 10px 15px;
     margin: 5px 0;
     border: none;
     cursor: pointer;
-    width: 15%;
+    width: 20%;
 }
 
 
@@ -96,13 +98,13 @@ span.psw {
 .signupbtn {
     background-color: black;
     font-family: 'Arima Madurai', cursive;
-    font-size: 20px;
+    font-size: 13px;
     color: white;
     padding: 10px 15px;
     margin: 5px 0;
     border: none;
     cursor: pointer;
-    width: 15%;
+    width: 20%;
 }
 		
 		
